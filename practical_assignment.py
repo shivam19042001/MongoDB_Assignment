@@ -1,3 +1,5 @@
+#1 Write a Python script to load the Superstore dataset from a CSV file into MongoDB.
+
 import pandas as pd
 from pymongo import MongoClient
 import pprint
@@ -7,7 +9,7 @@ try:
     superstore_df = pd.read_csv("superstore.csv", encoding='ISO-8859-1')
     print("✅ CSV file loaded successfully.")
 except Exception as e:
-    print(f"❌ Failed to load CSV: {e}")
+    print(f" Failed to load CSV: {e}")
     exit()
 
 # === Step 2: Convert DataFrame to list of dictionaries ===
@@ -27,7 +29,7 @@ try:
     print(f"✅ {len(result.inserted_ids)} records inserted successfully!")
 
 except Exception as e:
-    print(f"❌ Failed to connect or insert data: {e}")
+    print(f" Failed to connect or insert data: {e}")
 
 # 2. Retrieve and print all documents
 print("\n#2. All Documents:")
